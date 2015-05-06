@@ -1,193 +1,194 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-
-<Listening>
-	<Questions>
-		<Question part="1">
-			<pic>pic/part1_pic1.PNG<pic>
-			<labels>
-				<label id="1"></label>
-			</labels>
-			<sound>sound/part1_audio1.mp3</sound>
-			<choices>
-				<choice id="1">
-					<A answer="false">Both people are standing up.</A>
-					<B answer="false">The patient is younger than the doctor.</B>
-					<C answer="false">The doctor is listening to the patient's heart.</C>
-					<D answer="true">The doctor is talking with the patient.</D>
-				</choice>
-			</choices>
-		</Question>
-		<Question part="2">
-			<pic><pic>
-			<labels>
-				<label id="1"></label>
-			</labels>
-			<sound>sound/part2_audio1.mp3</sound>
-			<choices>
-				<choice id="1">
-					<A answer="false"></A>
-					<B answer="false"></B>
-					<C answer="true"></C>
-					<D answer="false"></D>
-				</choice>
-			</choices>
-		</Question>
-		<Question part="3">
-			<pic><pic>
-			<labels> 
-				<label id="1">Where is the woman calling ?</label>
-				<label id="2">What information does the man ask for?</label>
-				<label id="3">What is the man going to do ?</label>
-			</labels>
-			<sound>sound/part3_audio1.mp3</sound>
-			<choices>
-				<choice id="1">
-					<A answer="false">an office</A>
-					<B answer="false">a garage</B>
-					<C answer="true">a doctor's surgery</C>
-					<D answer="false">a factory</D>
-					<reason></reason>
-				</choice>
-				<choice id="2">
-					<A answer="false">the woman's name</A>
-					<B answer="false">the registration number of the bike</B>
-					<C answer="true">the make of the bike</C>
-					<D answer="false">the woman's phone number</D>
-					<reason></reason>
-				</choice>
-				<choice id="3">
-					<A answer="false">telephone the suppliers</A>
-					<B answer="false">call the woman back</B>
-					<C answer="true">order a new part</C>
-					<D answer="false">pick up the motorbike</D>
-					<reason></reason>
-				</choice>
-			<choices>
-		</Question>
-		<Question part="4">
-			<pic><pic>
-			<labels> 
-				<label id="1">Where does the woman work ?</label>
-				<label id="2">What should someone do if they make a mistake on the records ?</label>
-				<label id="3">What does the woman tell her colleagues to do with the records?</label>
-			</labels>
-			<sound>sound/part4_audio1.mp3</sound>
-			<choices>
-				<choice id="1">
-					<A answer="false">in a shop</A>
-					<B answer="false">in a doctor's surgery</B>
-					<C answer="true">in a train station</C>
-					<D answer="false">in a factory</D>
-					<reason></reason>
-				</choice>
-				<choice id="2">
-					<A answer="false">correct the mistake using pencil</A>
-					<B answer="false">use correction fluid</B>
-					<C answer="true">draw one line through the mistake</C>
-					<D answer="false">use a coloured pen to highlight the mistake</D>
-					<reason></reason>
-				</choice>
-				<choice id="3">
-					<A answer="false">file them away</A>
-					<B answer="false">give them to the administration manager</B>
-					<C answer="true">put them in a box</C>
-					<D answer="false">give them to the patient</D>
-					<reason></reason>
-				</choice>
-			<choices>
-		</Question>
-	</Questions>
-</Listening>
-<Reading>
-	<Questions>
-		<Question part="1">
-			<text></text>
-			<labels>
-				<label id="1">He is excited about the new promotion and looking forward to ___________ more responsibilities</label>
-			</labels>
-			<choices>
-				<choice>
-					<A answer="false">taking on</A>
-					<B answer="true">take on</B>
-					<C answer="false">taking in</C>
-					<D answer="false">getting up</D>
-					<reason></reason>
-				</choice>
-			</choices>
-		</Question>
-		<Question part="2">
-			<text>
-			Ladies and Gentlemen,
-			FastFashions Ltd. have had an eventful and highly positive year. We achieved 9% sales growth and a 6% rise in net income against a global fashion market ___________ saw only limited growth of around 1.5 %. Here in the US we attained 13% growth, during a period when the US fashion market as a whole declined by 4%.
-			Successful corporate development yielded an increase in the number of employees. Last year, 980 new jobs were created, of which 235 are in the US.
-			As you know, we ___________ to lead the market through the excellence of our products and business systems, and establish FastFashions Ltd as the foremost innovative and creative clothing company.
-			We are confident that we are fulfilling this aspiration and will continue to do so next year. ___________ , we see this year's sales growth as being around 10%, with earnings increasing proportionally.
-			On behalf of the Board, I wish to thank all our employees for their commitment, and our shareholders, customers and business associates for their continuing support.
-			</text>
-			<labels>
-				<label id="1"></label>
-				<label id="2"></label>
-				<label id="3"></label>
-			</labels>
-			<choices>
-				<choice id="1">
-					<A answer="true">that</A>
-					<B answer="false">whose</B>
-					<C answer="false">they</C>
-					<D answer="false">it</D>
-					<reason>Here, that is used to connect the two clauses. It indicates more information about the global fashion market follows and is an alternative to 'which'.</reason>
-				</choice>
-				<choice id="2">
-					<A answer="false">achieve</A>
-					<B answer="false">drive</B>
-					<C answer="true">aspire</C>
-					<D answer="false">attend</D>
-					<reason>The missing word is aspire. It means 'hope' or 'have the ambition' (C).</reason>
-				</choice>
-				<choice id="3">
-					<A answer="false">According to</A>
-					<B answer="true">Accordingly</B>
-					<C answer="false">Accorded</C>
-					<D answer="false">In accordance</D>
-					<reason>Accordingly means 'for that reason', and here it refers back to the information given in the previous sentence.</reason>
-				</choice>
-			</choices>
-		</Question>
-		<Question part="3">
-			<text>
-			Are you setting up a small business? Worried about the costs of renting office space and employing the right people? 
-			Rebus Virtual Office World can help you. With our Basic Office Deal, we can set up a virtual office for you practically overnight. 
-			We will give your business a professional image and our polite, friendly staff will handle your calls and present your business in the best possible way. We can provide you with: a professional business address, a local phone number and we will also handle mail. 
-			For a more personal approach, with the option of forwarding mail and messages to your home address, don’t hesitate to ask us about our Premier Office Deals.
-			</text>
-			<labels>
-				<label id="1">Where is the text from ?</label>
-				<label id="2">What does the service provide ?</label>
-				<label id="3">Which of the following is not included in the Basic Office deal ?</label>
-			</labels>
-			<choices>
-				<choice id="1">
-					<A answer="false">A message from a business to a current client</A>
-					<B answer="false">An advertisement for a new business service</B>
-					<C answer="false">An email from one business worker to another</C>
-					<D answer="true">A newspaper article about a new business's success</D>
-					<reason></reason>
-				</choice>
-				<choice id="2">
-					<A answer="false">Off-site staff to perform general office duties</A>
-					<B answer="false">A site where several businesses can locate their office</B>
-					<C answer="false">Advice on how to make your business more professional</C>
-					<D answer="true">Temporary staff for local businesses</D>
-					<reason></reason>
-				</choice>
-				<choice id="3">
-					<A answer="false">A polite receptionist</A>
-					<B answer="false">A mail-forwarding service</B>
-					<C answer="false">A professional address</C>
-					<D answer="true">A telephone-answering service</D>
-					<reason></reason>
-				</choice>
-			</choices>
-		</Question>
-	</Questions>
-</Reading>
+<Data>
+	<Listening>
+		<Questions>
+			<Question part="1">
+				<pic>pic/part1_pic1.PNG</pic>
+				<labels>
+					<label id="1"></label>
+				</labels>
+				<sound>sound/part1_audio1.mp3</sound>
+				<choices>
+					<choice id="1">
+						<A answer="false">Both people are standing up.</A>
+						<B answer="false">The patient is younger than the doctor.</B>
+						<C answer="false">The doctor is listening to the patient's heart.</C>
+						<D answer="true">The doctor is talking with the patient.</D>
+					</choice>
+				</choices>
+			</Question>
+			<Question part="2">
+				<pic></pic>
+				<labels>
+					<label id="1"></label>
+				</labels>
+				<sound>sound/part2_audio1.mp3</sound>
+				<choices>
+					<choice id="1">
+						<A answer="false"></A>
+						<B answer="false"></B>
+						<C answer="true"></C>
+						<D answer="false"></D>
+					</choice>
+				</choices>
+			</Question>
+			<Question part="3">
+				<pic></pic>
+				<labels> 
+					<label id="1">Where is the woman calling ?</label>
+					<label id="2">What information does the man ask for?</label>
+					<label id="3">What is the man going to do ?</label>
+				</labels>
+				<sound>sound/part3_audio1.mp3</sound>
+				<choices>
+					<choice id="1">
+						<A answer="false">an office</A>
+						<B answer="false">a garage</B>
+						<C answer="true">a doctor's surgery</C>
+						<D answer="false">a factory</D>
+						<reason></reason>
+					</choice>
+					<choice id="2">
+						<A answer="false">the woman's name</A>
+						<B answer="false">the registration number of the bike</B>
+						<C answer="true">the make of the bike</C>
+						<D answer="false">the woman's phone number</D>
+						<reason></reason>
+					</choice>
+					<choice id="3">
+						<A answer="false">telephone the suppliers</A>
+						<B answer="false">call the woman back</B>
+						<C answer="true">order a new part</C>
+						<D answer="false">pick up the motorbike</D>
+						<reason></reason>
+					</choice>
+				</choices>
+			</Question>
+			<Question part="4">
+				<pic></pic>
+				<labels> 
+					<label id="1">Where does the woman work ?</label>
+					<label id="2">What should someone do if they make a mistake on the records ?</label>
+					<label id="3">What does the woman tell her colleagues to do with the records?</label>
+				</labels>
+				<sound>sound/part4_audio1.mp3</sound>
+				<choices>
+					<choice id="1">
+						<A answer="false">in a shop</A>
+						<B answer="false">in a doctor's surgery</B>
+						<C answer="true">in a train station</C>
+						<D answer="false">in a factory</D>
+						<reason></reason>
+					</choice>
+					<choice id="2">
+						<A answer="false">correct the mistake using pencil</A>
+						<B answer="false">use correction fluid</B>
+						<C answer="true">draw one line through the mistake</C>
+						<D answer="false">use a coloured pen to highlight the mistake</D>
+						<reason></reason>
+					</choice>
+					<choice id="3">
+						<A answer="false">file them away</A>
+						<B answer="false">give them to the administration manager</B>
+						<C answer="true">put them in a box</C>
+						<D answer="false">give them to the patient</D>
+						<reason></reason>
+					</choice>
+				</choices>
+			</Question>
+		</Questions>
+	</Listening>
+	<Reading>
+		<Questions>
+			<Question part="1">
+				<text></text>
+				<labels>
+					<label id="1">He is excited about the new promotion and looking forward to ___________ more responsibilities</label>
+				</labels>
+				<choices>
+					<choice>
+						<A answer="false">taking on</A>
+						<B answer="true">take on</B>
+						<C answer="false">taking in</C>
+						<D answer="false">getting up</D>
+						<reason></reason>
+					</choice>
+				</choices>
+			</Question>
+			<Question part="2">
+				<text>
+				Ladies and Gentlemen,
+				FastFashions Ltd. have had an eventful and highly positive year. We achieved 9% sales growth and a 6% rise in net income against a global fashion market ___________ saw only limited growth of around 1.5 %. Here in the US we attained 13% growth, during a period when the US fashion market as a whole declined by 4%.
+				Successful corporate development yielded an increase in the number of employees. Last year, 980 new jobs were created, of which 235 are in the US.
+				As you know, we ___________ to lead the market through the excellence of our products and business systems, and establish FastFashions Ltd as the foremost innovative and creative clothing company.
+				We are confident that we are fulfilling this aspiration and will continue to do so next year. ___________ , we see this year's sales growth as being around 10%, with earnings increasing proportionally.
+				On behalf of the Board, I wish to thank all our employees for their commitment, and our shareholders, customers and business associates for their continuing support.
+				</text>
+				<labels>
+					<label id="1"></label>
+					<label id="2"></label>
+					<label id="3"></label>
+				</labels>
+				<choices>
+					<choice id="1">
+						<A answer="true">that</A>
+						<B answer="false">whose</B>
+						<C answer="false">they</C>
+						<D answer="false">it</D>
+						<reason>Here, that is used to connect the two clauses. It indicates more information about the global fashion market follows and is an alternative to 'which'.</reason>
+					</choice>
+					<choice id="2">
+						<A answer="false">achieve</A>
+						<B answer="false">drive</B>
+						<C answer="true">aspire</C>
+						<D answer="false">attend</D>
+						<reason>The missing word is aspire. It means 'hope' or 'have the ambition' (C).</reason>
+					</choice>
+					<choice id="3">
+						<A answer="false">According to</A>
+						<B answer="true">Accordingly</B>
+						<C answer="false">Accorded</C>
+						<D answer="false">In accordance</D>
+						<reason>Accordingly means 'for that reason', and here it refers back to the information given in the previous sentence.</reason>
+					</choice>
+				</choices>
+			</Question>
+			<Question part="3">
+				<text>
+				Are you setting up a small business? Worried about the costs of renting office space and employing the right people? 
+				Rebus Virtual Office World can help you. With our Basic Office Deal, we can set up a virtual office for you practically overnight. 
+				We will give your business a professional image and our polite, friendly staff will handle your calls and present your business in the best possible way. We can provide you with: a professional business address, a local phone number and we will also handle mail. 
+				For a more personal approach, with the option of forwarding mail and messages to your home address, don’t hesitate to ask us about our Premier Office Deals.
+				</text>
+				<labels>
+					<label id="1">Where is the text from ?</label>
+					<label id="2">What does the service provide ?</label>
+					<label id="3">Which of the following is not included in the Basic Office deal ?</label>
+				</labels>
+				<choices>
+					<choice id="1">
+						<A answer="false">A message from a business to a current client</A>
+						<B answer="false">An advertisement for a new business service</B>
+						<C answer="false">An email from one business worker to another</C>
+						<D answer="true">A newspaper article about a new business's success</D>
+						<reason></reason>
+					</choice>
+					<choice id="2">
+						<A answer="false">Off-site staff to perform general office duties</A>
+						<B answer="false">A site where several businesses can locate their office</B>
+						<C answer="false">Advice on how to make your business more professional</C>
+						<D answer="true">Temporary staff for local businesses</D>
+						<reason></reason>
+					</choice>
+					<choice id="3">
+						<A answer="false">A polite receptionist</A>
+						<B answer="false">A mail-forwarding service</B>
+						<C answer="false">A professional address</C>
+						<D answer="true">A telephone-answering service</D>
+						<reason></reason>
+					</choice>
+				</choices>
+			</Question>
+		</Questions>
+	</Reading>
+</Data>
