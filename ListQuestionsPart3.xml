@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Questions>
+	<Question>
+		<sound>sound/part1_audio1.mp3</sound>
+		<label id="1">Where is the woman calling ?</>
+		<choice id="1">
+			<A answer="false">An office.</A>
+			<B answer="false">A garage.</B>
+			<C answer="false">A doctor's surgery.</C>
+			<D answer="false">A factory</D>
+		</choice>
+		<reason id="1">The woman said "I'm calling about my motorbike.</reason>
+		<label id="2">What information does that man ask for ?</>
+		<choice id="2">
+			<A answer="false">The woman's name.</A>
+			<B answer="false">The registration number of the bike.</B>
+			<C answer="false">The make of the bike.</C>
+			<D answer="false">The woman's phone number.</D>
+		</choice>
+		<reason id="2">The man said "What's the make of the bike?".</reason>
+		<label id="3">What is the man going to do ?</>
+		<choice id="3">
+			<A answer="false">Call the suppliers.</A>
+			<B answer="false">Call the woman back.</B>
+			<C answer="false">Order a new part.</C>
+			<D answer="false">Pick up the motorbike.</D>
+		</choice>
+		<reason id="3">The man said "I'll call our suppliers.</reason>
+	</Question>
+	<Question>
+		<sound>sound/part1_audio2.mp3</sound>
+		<label id="1">Where is the woman calling ?</>
+		<choice id="1">
+			<A answer="false">An office.</A>
+			<B answer="true">A garage.</B>
+			<C answer="false">A doctor's surgery.</C>
+			<D answer="false">A factory</D>
+		</choice>
+		<reason id="1">The woman said "I'm calling about my motorbike.</reason>
+		<label id="2">What information does that man ask for ?</>
+		<choice id="2">
+			<A answer="false">The woman's name.</A>
+			<B answer="false">The registration number of the bike.</B>
+			<C answer="true">The make of the bike.</C>
+			<D answer="false">The woman's phone number.</D>
+		</choice>
+		<reason id="2">The man said "What's the make of the bike?".</reason>
+		<label id="3">What is the man going to do ?</>
+		<choice id="3">
+			<A answer="true">Call the suppliers.</A>
+			<B answer="false">Call the woman back.</B>
+			<C answer="false">Order a new part.</C>
+			<D answer="false">Pick up the motorbike.</D>
+		</choice>
+		<reason id="3">The man said "I'll call our suppliers".</reason>
+	</Question>
+	<Question>
+		<sound>sound/part1_audio3.mp3</sound>
+		<label id="1"></>
+		<choice id="1">
+			<A answer="false">Yes, it very complicated.</A>
+			<B answer="false">Yes, I often where it.</B>
+			<C answer="false">No, but she use to.</C>
+			<D answer="false"></D>
+		</choice>
+		<reason id="1"></reason>
+		<label id="2"></>
+		<choice id="2">
+			<A answer="false">Yes, it very complicated.</A>
+			<B answer="false">Yes, I often where it.</B>
+			<C answer="false">No, but she use to.</C>
+			<D answer="false"></D>
+		</choice>
+		<reason id="2"></reason>
+		<label id="3"></>
+		<choice id="3">
+			<A answer="false">Yes, it very complicated.</A>
+			<B answer="false">Yes, I often where it.</B>
+			<C answer="false">No, but she use to.</C>
+			<D answer="false"></D>
+		</choice>
+		<reason id="3"></reason>
+	</Question>
+	<Question>
+		<sound>sound/part1_audio4.mp3</sound>
+		<choice>
+			<A answer="false">The ships are still in port.</A>
+			<B answer="true">No, not yet.</B>
+			<C answer="false">The report has an interesting red design.</C>
+			<D answer="false"></D>
+		</choice>
+	</Question>
+	<Question>
+		<sound>sound/part1_audio5.mp3</sound>
+		<label id="1"></>
+		<choice id="1">
+			<A answer="false">Yes, it very complicated.</A>
+			<B answer="false">Yes, I often where it.</B>
+			<C answer="false">No, but she use to.</C>
+			<D answer="false"></D>
+		</choice>
+		<reason id="1"></reason>
+		<label id="2"></>
+		<choice id="2">
+			<A answer="false">Yes, it very complicated.</A>
+			<B answer="false">Yes, I often where it.</B>
+			<C answer="false">No, but she use to.</C>
+			<D answer="false"></D>
+		</choice>
+		<reason id="2"></reason>
+		<label id="3"></>
+		<choice id="3">
+			<A answer="false">Yes, it very complicated.</A>
+			<B answer="false">Yes, I often where it.</B>
+			<C answer="false">No, but she use to.</C>
+			<D answer="false"></D>
+		</choice>
+		<reason id="3"></reason>
+	</Question>
+</Questions>		
