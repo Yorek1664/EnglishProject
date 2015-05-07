@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Questions>
+	<Question part="1">
+		<pic>pic/part1_pic1.PNG</pic>
+		<label id="1"></label>
+		<sound>sound/part1_audio1.mp3</sound>
+		<choice>
+			<A answer="false">Both people are standing up.</A>
+			<B answer="false">The patient is younger than the doctor.</B>
+			<C answer="false">The doctor is listening to the patient's heart.</C>
+			<D answer="true">The doctor is talking with the patient.</D>
+		</choice>
+	</Question>
+</Questions>		

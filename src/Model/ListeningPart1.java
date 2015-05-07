@@ -1,6 +1,6 @@
 package Model;
 
-public class ImageDescriptionQuestion{
+public class ListeningPart1{
 
 	private final String type = "Listening";
 	
@@ -14,7 +14,7 @@ public class ImageDescriptionQuestion{
 	
 	private char answer;
 	
-	public ImageDescriptionQuestion(String pic, String sound, String[] c, char a){
+	public ListeningPart1(String pic, String sound, String[] c, char a){
 		this.pic_file = pic;
 		this.sound_file = sound;
 		this.choice = c;

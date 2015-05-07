@@ -10,19 +10,19 @@ import org.jdom2.input.*;
 import org.jdom2.output.*;
 import org.jdom2.xpath.*;
 
-import Model.ImageDescriptionQuestion;
+import Model.ListeningPart1;
 
 public class ParserXml {
 	
-	private final String xml_file = "ListeQuestions.xml";
+	private final String xml_file_listening_part1 = "ListQuestionsPart1.xml";
 	
-	public ArrayList<ImageDescriptionQuestion> getListeningPart1(){
+	public ArrayList<ListeningPart1> getListeningPart1(){
 		
 		SAXBuilder sax = new SAXBuilder();
 		
-		File file = new File(xml_file);
+		File file = new File(xml_file_listening_part1);
 		
-		ArrayList<ImageDescriptionQuestion> listIdq = new ArrayList<ImageDescriptionQuestion>();
+		ArrayList<ListeningPart1> listIdq = new ArrayList<ListeningPart1>();
 		try{
 			Document doc = sax.build(file);
 			
@@ -30,7 +30,7 @@ public class ParserXml {
 			
 			XPathFactory xFactory = XPathFactory.instance();
 			
-			XPathExpression<Element> expr = xFactory.compile("//Listening/Questions/Question[@part='1']", Filters.element());
+			XPathExpression<Element> expr = xFactory.compile("//Questions/Question", Filters.element());
 			
 			List<Element> listQuestion = expr.evaluate(doc);
 			
@@ -43,8 +43,7 @@ public class ParserXml {
 				
 				pic = questionElement.getChildText("pic");
 				sound = questionElement.getChildText("sound");
-				Element test = questionElement.getChild("choices").getChild("choice");
-				List<Element> choices_xml =  questionElement.getChild("choices").getChild("choice").getChildren();
+				List<Element> choices_xml =  questionElement.getChild("choice").getChildren();
 				i = 0;
 				answer = 'E';
 				for(Element choice : choices_xml){		
@@ -57,7 +56,7 @@ public class ParserXml {
 				}
 				//System.out.println(pic + " " + sound);
 				if(answer != 'E')
-					listIdq.add(new ImageDescriptionQuestion(pic, sound, choices, answer));
+					listIdq.add(new ListeningPart1(pic, sound, choices, answer));
 				else
 					throw new Exception("Error : answer not found");
 			}

@@ -1,6 +1,6 @@
 package Model;
 
-public class TextQuestion {
+public class ReadingPart2 {
 	
 	private final String type = "Reading";
 	

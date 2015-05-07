@@ -1,6 +1,6 @@
 package Model;
 
-public class DialogQuestion {
+public class ListeningPart3 {
 
 	private final String type = "Listening";
 	
