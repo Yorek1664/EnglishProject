@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <Questions>
-	<Question part="1">
+	<Question>
 		<pic>pic/part1_pic1.PNG</pic>
-		<label id="1"></label>
 		<sound>sound/part1_audio1.mp3</sound>
 		<choice>
 			<A answer="false">Both people are standing up.</A>
