@@ -2,10 +2,9 @@ package Game;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.math.*;
 
-import Model.ListeningPart1;
 import xml.ParserXml;
+import Model.ListeningPart1;
 
 public class GameListeningP1 extends GameLoop{
 
