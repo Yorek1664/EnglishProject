@@ -1,50 +1,138 @@
 package ihm;
 
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.text.TextAlignment;
 
 
 public class AccueilController extends Controller{
 	private static final int PADDING = 15;
-	VBox vbox = new VBox();
-	HBox hbox = new HBox();
 	Label title = new Label("Training for Toeic");
-	Button butRead = new Button("Reading");
-	Button butList = new Button("Listening");
+	Label butRead = new Label("Reading");
+	Label butList = new Label();
 	@Override
 	protected void setStartCondition() {
-		this.getChildren().add(vbox);
-		this.vbox.setAlignment(Pos.CENTER);
-		this.vbox.setPadding(new Insets(15));
-		this.vbox.getChildren().addAll(title,hbox);
-		this.hbox.getChildren().addAll(butRead,butList);
-		butRead.setOnAction(e->{
-			title.textProperty().set("read");
-		});
-		butList.setOnAction(e->{
-			title.textProperty().set("list");
-		});
-		
+		//this.setBackgroundImage("accueil.png",600,400);
+		this.setBackgroundImage("question.png",600,374);
+		this.getChildren().addAll(getLabelTitle(),getExit());
 		//Binding position/size
-		
-		vbox.prefWidthProperty().bind(this.widthProperty());
-		vbox.maxWidthProperty().bind(vbox.prefWidthProperty());
-		vbox.minWidthProperty().bind(vbox.prefWidthProperty());
+	}
+	/*static public Label getLabelA(){
+		Label l = new Label();
+		l.setLayoutX(60);
+		l.setLayoutY(303);
+		l.setPrefHeight(36);
+		l.setPrefWidth(230);
+		l.setTextAlignment(TextAlignment.CENTER);
+		return l;
+	}
+	static public Label getLabelB(){
+		Label l = new Label();
+		l.setLayoutX(310);
+		l.setLayoutY(303);
+		l.setPrefHeight(36);
+		l.setPrefWidth(230);
+		l.setTextAlignment(TextAlignment.CENTER);
+		return l;
+	}
+	static public Label getLabelTitle(){
+		Label l = new Label();
+		l.setLayoutX(80);
+		l.setLayoutY(205);
+		l.setPrefHeight(63);
+		l.setPrefWidth(440);
+		l.setTextAlignment(TextAlignment.CENTER);
+		return l;
+	}*/
+	static public Label getLabelA(){
+		Label l = new Label();
+		l.setLayoutX(46);
+		l.setLayoutY(287);
+		l.setPrefHeight(33);
+		l.setPrefWidth(235);
+		l.setTextAlignment(TextAlignment.CENTER);
+		return l;
+	}
+	static public Label getLabelB(){
+		Label l = new Label();
+		l.setLayoutX(323);
+		l.setLayoutY(287);
+		l.setPrefHeight(33);
+		l.setPrefWidth(235);
+		l.setTextAlignment(TextAlignment.CENTER);
+		return l;
+	}	
+	static public Label getLabelC(){
+		Label l = new Label();
+		l.setLayoutX(46);
+		l.setLayoutY(334);
+		l.setPrefHeight(33);
+		l.setPrefWidth(235);
+		l.setTextAlignment(TextAlignment.CENTER);
+		return l;
+	}
+	static public Label getLabelD(){
+		Label l = new Label();
+		l.setLayoutX(323);
+		l.setLayoutY(334);
+		l.setPrefHeight(33);
+		l.setPrefWidth(235);
+		l.setTextAlignment(TextAlignment.CENTER);
+		return l;
+	}
+	static public Label getLabelTitle(){
+		Label l = new Label();
+		l.setLayoutX(57);
+		l.setLayoutY(215);
+		l.setPrefHeight(58);
+		l.setPrefWidth(485);
+		l.setTextAlignment(TextAlignment.CENTER);
+		return l;
+	}
 
-		hbox.prefWidthProperty().bind(vbox.prefWidthProperty().subtract(PADDING));
-		hbox.maxWidthProperty().bind(hbox.prefWidthProperty());
-		hbox.minWidthProperty().bind(hbox.prefWidthProperty());
-		
-		butRead.prefWidthProperty().bind(hbox.prefWidthProperty().divide(3));
-		butRead.maxWidthProperty().bind(butRead.prefWidthProperty());
-		butRead.minWidthProperty().bind(butRead.prefWidthProperty());
+	static public Label getJoker1(){
+		Label l = new Label();
+		l.setLayoutX(380);
+		l.setLayoutY(5);
+		l.setPrefHeight(37);
+		l.setPrefWidth(65);
+		Button button = new Button();
+		button.setPrefSize(l.getPrefWidth(), l.getPrefHeight());
+		l.setGraphic(button);
+		return l;
+	}
+	static public Label getJoker2(){
+		Label l = new Label();
+		l.setLayoutX(455);
+		l.setLayoutY(5);
+		l.setPrefHeight(37);
+		l.setPrefWidth(65);
+		Button button = new Button();
+		button.setPrefSize(l.getPrefWidth(), l.getPrefHeight());
+		l.setGraphic(button);
+		return l;
+	}
+	static public Label getJoker3(){
+		Label l = new Label();
+		l.setLayoutX(530);
+		l.setLayoutY(5);
+		l.setPrefHeight(37);
+		l.setPrefWidth(65);
+		Button button = new Button();
+		button.setPrefSize(l.getPrefWidth(), l.getPrefHeight());
+		l.setGraphic(button);
+		return l;
+	}
 
-		butList.prefWidthProperty().bind(hbox.prefWidthProperty().divide(3));
-		butList.maxWidthProperty().bind(butList.prefWidthProperty());
-		butList.minWidthProperty().bind(butList.prefWidthProperty());
+	static public Label getExit(){
+		Label l = new Label();
+		l.setLayoutX(5);
+		l.setLayoutY(5);
+		l.setPrefHeight(37);
+		l.setPrefWidth(65);
+		Button button = new Button();
+		button.setPrefSize(l.getPrefWidth(), l.getPrefHeight());
+		l.setGraphic(button);
+		return l;
 	}
 }
