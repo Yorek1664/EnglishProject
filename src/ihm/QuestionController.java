@@ -1,5 +1,6 @@
 package ihm;
 
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,8 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.sun.javafx.scene.control.behavior.TwoLevelFocusBehavior;
 
+
+
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
@@ -39,6 +43,10 @@ public class QuestionController extends Controller{
 	Question actualQuestion=null;
 	Thread threadMusic ;
 	MediaPlayer mediaPlayer;
+	IntegerProperty score=new SimpleIntegerProperty(0);
+	ImageView gain;
+	List<Label> valideImages = new ArrayList<Label>();
+	
 	
 	@Override
 	protected void setStartCondition() {
@@ -47,7 +55,29 @@ public class QuestionController extends Controller{
 		this.image.setFitHeight(150);
 		this.image.setLayoutX(203);
 		this.image.setLayoutY(45);
-		this.getChildren().addAll(a,b,c,d,joker1,joker2,image,exit,title);
+		
+		this.gain = new ImageView();
+		this.gain.setFitWidth(95);
+		this.gain.setFitHeight(165);
+		this.gain.setLayoutX(500);
+		this.gain.setLayoutY(45);
+		try {
+			this.gain.setImage(new Image(new FileInputStream(new File("src/gain.png")), image.getFitWidth(), image.getFitHeight(), false, true));
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		}
+		
+		
+		this.getChildren().addAll(a,b,c,d,joker1,joker2,image,exit,title,gain);
+		setListValide();
+		score.addListener((obs,o,n)->{
+			if(n.intValue()>15){
+				n=15;
+			}
+			for(int i =0;i<n.intValue();i++){
+				valideImages.get(14-i).setVisible(true);
+			}
+		});
 		exit.setOnMouseClicked(e->{
 			exit();
 		});
@@ -77,12 +107,24 @@ public class QuestionController extends Controller{
 		if(verifAnswer(s)){
 			setNextQuestion();
 			displayQuestion();
+			score.set(score.get()+1);
 		}else{
+			if(score.get()<5){
+				score.set(0);
+			}else if(score.get()<10){
+				score.set(5);
+			}else if(score.get()<15){
+				score.set(10);
+			}
 			exit();
 		}
 	}
 	private void exit() {
 		try {
+			Alert alert = new Alert(AlertType.INFORMATION, "You ear "+getValue()+"€ in this game.", null);
+			alert.setHeaderText("Finish!");
+			alert.setTitle("Game over");
+			alert.showAndWait();
 			initialiseDisplay();
 			Controller.initialise(this.getApp(), AccueilController.class);
 		} catch (Exception e1) {
@@ -298,7 +340,62 @@ public class QuestionController extends Controller{
 			}
 		}
 	}
-	
+	private void setListValide(){
+		for(int i=0;i<15;i++){
+			Label contour = new Label();
+			contour.setPrefWidth(2);
+			contour.setPrefHeight(2);
+			contour.minHeightProperty().bind(contour.prefHeightProperty());
+			contour.maxHeightProperty().bind(contour.prefHeightProperty());
+			contour.minWidthProperty().bind(contour.prefWidthProperty());
+			contour.maxWidthProperty().bind(contour.prefWidthProperty());
+			contour.setLayoutX(577);
+			contour.setLayoutY(55+(int)(10.4*i));
+			contour.setVisible(false);
+			try {
+				contour.setGraphic(new ImageView(new Image(new FileInputStream(new File("src/valide.png")), 12, 7, false, true)));
+			} catch (FileNotFoundException e2) {}
+			this.valideImages.add(contour);
+			this.getChildren().add(contour);
+		}
+	}
+	private double getValue(){
+		if(score.get()<=0){
+			return 0;
+		}
+		switch (score.get()) {
+		case 1:
+			return 200;
+		case 2:
+			return 300;
+		case 3:
+			return 500;
+		case 4:
+			return 800;
+		case 5:
+			return 1500;
+		case 6:
+			return 3000;
+		case 7:
+			return 6000;
+		case 8:
+			return 12000;
+		case 9:
+			return 24000;
+		case 10:
+			return 48000;
+		case 11:
+			return 72000;
+		case 12:
+			return 100000;
+		case 13:
+			return 150000;
+		case 14:
+			return 300000;
+		default:
+			return 1000000;
+		}
+	}
 	static public Label getLabelA(){
 		Label l = new Label();
 		l.setLayoutX(46);

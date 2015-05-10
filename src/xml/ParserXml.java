@@ -121,7 +121,7 @@ public class ParserXml {
 						//System.out.println("Answer " + answer);
 					}
 					System.out.println(choice.getText());
-					q.addAnswers(choice.getText());
+					q.addAnswers(choice.getName());
 					
 					//System.out.println("Choice : " + choices[i]);
 					
@@ -186,7 +186,7 @@ public class ParserXml {
 						
 						//System.out.println("Answer? " + choice.getAttribute("answer").getValue().trim());
 						if(choice.getAttribute("answer").getValue().trim().compareTo("true") == 0){
-							q.setGoodAnswer(choice.getName());
+							q.setGoodAnswer(choice.getText());
 							//System.out.println("Answer " + answer);
 						}
 						System.out.println(choice.getText());
@@ -256,7 +256,7 @@ public class ParserXml {
 						
 						//System.out.println("Answer? " + choice.getAttribute("answer").getValue().trim());
 						if(choice.getAttribute("answer").getValue().trim().compareTo("true") == 0){
-							q.setGoodAnswer(choice.getName());
+							q.setGoodAnswer(choice.getText());
 							//System.out.println("Answer " + answer);
 						}
 						System.out.println(choice.getText());
@@ -314,7 +314,7 @@ public class ParserXml {
 				for(Element choice : choices_xml){		
 					//System.out.println("Answer? " + choice.getAttribute("answer").getValue().trim());
 					if(choice.getAttribute("answer").getValue().trim().compareTo("true") == 0){
-						q.setGoodAnswer(choice.getName());
+						q.setGoodAnswer(choice.getText());
 						//System.out.println("Answer " + answer);
 					}
 					System.out.println(choice.getText());
