@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Questions>
+	<Question>
+		<label>Our CEO won't be coming to the meeting because he _________ all week.</label>
+		<choice>
+			<A answer="false">don't feel</A>
+			<B answer="false">wasn't feeling</B>
+			<C answer="true">hasn't been feeling</C>
+			<D answer="false">felt</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>When do you go _________ vacation.</label>
+		<choice>
+			<A answer="false">in</A>
+			<B answer="true">on</B>
+			<C answer="false">off</C>
+			<D answer="false">at</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>_________ new engineers do we need to find.</label>
+		<choice>
+			<A answer="true">How many</A>
+			<B answer="false">How much</B>
+			<C answer="false">How far</C>
+			<D answer="false">How long</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>_________ the news last night, the freeway will be closed all day today.</label>
+		<choice>
+			<A answer="true">According to</A>
+			<B answer="false">Because of</B>
+			<C answer="false">Although</C>
+			<D answer="false">Even so</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>I have organized a series of _________ development seminars for our seniors manager.</label>
+		<choice>
+			<A answer="false">corporal</A>
+			<B answer="false">conglomerate</B>
+			<C answer="true">corporate</C>
+			<D answer="false">corporation</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>You have worked _________ hard and it is an excellent and very through report.</label>
+		<choice>
+			<A answer="false">frequently</A>
+			<B answer="false">considerably</B>
+			<C answer="false">significantly</C>
+			<D answer="true">extremely</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>I wish you _________ have come to the conference with us, it was highly informative</label>
+		<choice>
+			<A answer="false">might</A>
+			<B answer="true">could</B>
+			<C answer="false">should</C>
+			<D answer="false">may</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>There is _________ chance of me being able to join you later this evening.</label>
+		<choice>
+			<A answer="true">little</A>
+			<B answer="false">a few</B>
+			<C answer="false">any</C>
+			<D answer="false">few</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>While the stock _________ the staff worked in the evenings.</label>
+		<choice>
+			<A answer="false">has been checked</A>
+			<B answer="false">was checked</B>
+			<C answer="false">check</C>
+			<D answer="true">was being checked</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>The new service was expected to be a success; _________ very few customers upgraded their accounts.</label>
+		<choice>
+			<A answer="true">yet</A>
+			<B answer="false">just</B>
+			<C answer="false">moreover</C>
+			<D answer="false">although</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>My line manager wants the meeting _________ immediately.</label>
+		<choice>
+			<A answer="false">to arrange</A>
+			<B answer="false">arrange</B>
+			<C answer="true">arranged</C>
+			<D answer="false">be arranged</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>The flight arrives _________ Tokyo in three hours.</label>
+		<choice>
+			<A answer="true">in</A>
+			<B answer="false">into</B>
+			<C answer="false">at</C>
+			<D answer="false">on</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>The software developers _________ investigated the latest problem</label>
+		<choice>
+			<A answer="false">are just</A>
+			<B answer="false">still</B>
+			<C answer="true">have already</C>
+			<D answer="false">have yet</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>All the orders got _________ on schedule.</label>
+		<choice>
+			<A answer="false">delivering</A>
+			<B answer="true">delivered</B>
+			<C answer="false">to deliver</C>
+			<D answer="false">to be deliver</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>The executives pointed to immigration _________ the biggest drivers of the domestic market.</label>
+		<choice>
+			<A answer="false">rather than</A>
+			<B answer="true">as one of</B>
+			<C answer="false">resulting in</C>
+			<D answer="false">as leading</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>Commercial builders downplayed _________ a bust in the superheated housing market.</label>
+		<choice>
+			<A answer="false">the concern of</A>
+			<B answer="false">concerning</B>
+			<C answer="false">concerned that</C>
+			<D answer="true">concerns about</D>
+		</choice>
+	</Question>
+	<Question>
+		<label>_________ the end of year results were published, the managers got their bonuses.</label>
+		<choice>
+			<A answer="false">Because</A>
+			<B answer="true">When</B>
+			<C answer="false">While</C>
+			<D answer="false">If</D>
+		</choice>
+	</Question>
+</Questions>		

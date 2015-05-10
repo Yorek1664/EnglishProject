@@ -10,4 +10,46 @@
 			<D answer="true">The doctor is talking with the patient.</D>
 		</choice>
 	</Question>
+	
+	<Question>
+		<pic>pic/part1_pic2.PNG</pic>
+		<sound>sound/part1_audio2.mp3</sound>
+		<choice>
+			<A answer="false">The woman is checking in at the airport.</A>
+			<B answer="true">The woman is handing the passenger's ticket.</B>
+			<C answer="false">The people are at the hospital.</C>
+			<D answer="false">The flight has been cancelled.</D>
+		</choice>
+	</Question>
+	
+	<Question>
+		<pic>pic/part1_pic3.PNG</pic>
+		<sound>sound/part1_audio3.mp3</sound>
+		<choice>
+			<A answer="true">The man is arranging goods in a warehouse.</A>
+			<B answer="false">The man is in a cardboard factory.</B>
+			<C answer="false">The worker is opening a box.</C>
+			<D answer="false">The boxes are in a shop.</D>
+		</choice>
+	</Question>
+	<Question>
+		<pic>pic/part1_pic4.PNG</pic>
+		<sound>sound/part1_audio4.mp3</sound>
+		<choice>
+			<A answer="true">The farmer is holding the door open.</A>
+			<B answer="false">The farmer is holding the steering wheel.</B>
+			<C answer="false">The farmer is driving the tractor.</C>
+			<D answer="false">The farmer is getting in the tractor.</D>
+		</choice>
+	</Question>
+	<Question>
+		<pic>pic/part1_pic5.PNG</pic>
+		<sound>sound/part1_audio5.mp3</sound>
+		<choice>
+			<A answer="true">She is reading a newspaper.</A>
+			<B answer="false">The woman is pushing the wheelchair.</B>
+			<C answer="false">She is looking in her suitcase.</C>
+			<D answer="false">Her handbag is open.</D>
+		</choice>
+	</Question>
 </Questions>		

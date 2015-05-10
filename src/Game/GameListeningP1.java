@@ -79,6 +79,8 @@ public class GameListeningP1 extends GameLoop{
 		// TODO Auto-generated method stub
 		currentQuestion++;
 		
+		//gestion Pyramid
+		
 	}
 
 	@Override

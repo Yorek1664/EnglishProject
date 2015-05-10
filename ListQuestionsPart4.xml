@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Questions>
+	<Question>
+		<sound>sound/part4_audio1.mp3</sound>
+		<label id="1">Where does the woman work ?</>
+		<choice id="1">
+			<A answer="false">In a shop.</A>
+			<B answer="true">In a doctor's surgery.</B>
+			<C answer="false">In a train station.</C>
+			<D answer="false">In a factory.</D>
+		</choice>
+		<label id="2">What should someone do if they make a mistake on the records ?</>
+		<choice id="2">
+			<A answer="false">Correct the mistake using pencil.</A>
+			<B answer="false">Use correction fluid.</B>
+			<C answer="true">Draw one line through the mistake.</C>
+			<D answer="false">Use a coloured pen to highlight the mistake.</D>
+		</choice>
+		<label id="3">What does the woman tell her colleagues to do with records ?</>
+		<choice id="3">
+			<A answer="false">File them away.</A>
+			<B answer="false">Give them to administration manager.</B>
+			<C answer="true">Put them in a box.</C>
+			<D answer="false">Give them to the patient.</D>
+		</choice>
+	</Question>
+	<Question>
+		<sound>sound/part4_audio2.mp3</sound>
+		<label id="1">Where does this announcement take place ?</>
+		<choice id="1">
+			<A answer="true">On a coach.</A>
+			<B answer="false">On a train.</B>
+			<C answer="false">A train station.</C>
+			<D answer="false">An airport</D>
+		</choice>
+		<label id="2">Where will they arrive in London ?</>
+		<choice id="2">
+			<A answer="false">8 minutes late.</A>
+			<B answer="false">18 minutes late .</B>
+			<C answer="false">80 minutes late.</C>
+			<D answer="true">On time.</D>
+		</choice>
+		<label id="3">In Coach D...</>
+		<choice id="3">
+			<A answer="false">You cannot listen to music.</A>
+			<B answer="false">You can buy food and drinks.</B>
+			<C answer="true">You need to be quiet.</C>
+			<D answer="false">You can hear on the train speakers.</D>
+		</choice>
+	</Question>
+	<Question>
+		<sound>sound/part4_audio3.mp3</sound>
+		<label id="1">The people at the conference make signs for...</>
+		<choice id="1">
+			<A answer="true">roads.</A>
+			<B answer="false">shops.</B>
+			<C answer="false">advertisements.</C>
+			<D answer="false">restaurants.</D>
+		</choice>
+		<label id="2">What time will the lecture begin ?</>
+		<choice id="2">
+			<A answer="false">11.00.</A>
+			<B answer="true">11.30.</B>
+			<C answer="false">12.00.</C>
+			<D answer="false">12.30.</D>
+		</choice>
+		<label id="3">Where is the Angel Room ? </>
+		<choice id="3">
+			<A answer="false">On this floor.</A>
+			<B answer="false">On the next floor up.</B>
+			<C answer="false">On the next floor down.</C>
+			<D answer="true">Tow floors down.</D>
+		</choice>
+	</Question>
+	<Question>
+		<sound>sound/part4_audio4.mp3</sound>
+		<label id="1">What is NOT available on the ground floor of the library ?</>
+		<choice id="1">
+			<A answer="false">Computers.</A>
+			<B answer="false">Information desk.</B>
+			<C answer="false">Photocopying facilities.</C>
+			<D answer="true">Books.</D>
+		</choice>
+		<label id="2">Where can you find science books ?</>
+		<choice id="2">
+			<A answer="false">In the basement.</A>
+			<B answer="false">On the ground floor.</B>
+			<C answer="false">On the first floor.</C>
+			<D answer="true">On the second floor.</D>
+		</choice>
+		<label id="3">Which of the following is true about meeting rooms ?</>
+		<choice id="3">
+			<A answer="false">They are on the ground floor.</A>
+			<B answer="true">You don't have to pay to use them.</B>
+			<C answer="false">You need to book them at the information desk.</C>
+			<D answer="false">The meeting rooms are usually locked.</D>
+		</choice>
+	</Question>
+	<Question>
+		<sound>sound/part4_audio5.mp3</sound>
+		<label id="1">Who is the woman talking to ?</>
+		<choice id="1">
+			<A answer="false">Her boss.</A>
+			<B answer="true">A new employee.</B>
+			<C answer="false">Her secretary.</C>
+			<D answer="false">An important visitor.</D>
+		</choice>
+		<label id="2">What time can the man start work ?</>
+		<choice id="2">
+			<A answer="false">7.00.</A>
+			<B answer="false">8.00.</B>
+			<C answer="true">Between 7.00 and 9.30.</C>
+			<D answer="false">Between 8.00 and 9.30.</D>
+		</choice>
+		<label id="3">What does the woman want the man to do first ?</>
+		<choice id="3">
+			<A answer="true">Read some information.</A>
+			<B answer="false">A quiz.</B>
+			<C answer="false">Fix the computers.</C>
+			<D answer="false">See the building.</D>
+		</choice>
+	</Question>
+</Questions>		

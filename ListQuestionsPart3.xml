@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <Questions>
 	<Question>
-		<sound>sound/part1_audio1.mp3</sound>
-		<label id="1">Where is the woman calling ?</>
-		<choice id="1">
-			<A answer="false">An office.</A>
-			<B answer="false">A garage.</B>
-			<C answer="false">A doctor's surgery.</C>
-			<D answer="false">A factory</D>
-		</choice>
-		<reason id="1">The woman said "I'm calling about my motorbike.</reason>
-		<label id="2">What information does that man ask for ?</>
-		<choice id="2">
-			<A answer="false">The woman's name.</A>
-			<B answer="false">The registration number of the bike.</B>
-			<C answer="false">The make of the bike.</C>
-			<D answer="false">The woman's phone number.</D>
-		</choice>
-		<reason id="2">The man said "What's the make of the bike?".</reason>
-		<label id="3">What is the man going to do ?</>
-		<choice id="3">
-			<A answer="false">Call the suppliers.</A>
-			<B answer="false">Call the woman back.</B>
-			<C answer="false">Order a new part.</C>
-			<D answer="false">Pick up the motorbike.</D>
-		</choice>
-		<reason id="3">The man said "I'll call our suppliers.</reason>
-	</Question>
-	<Question>
-		<sound>sound/part1_audio2.mp3</sound>
+		<sound>sound/part3_audio1.mp3</sound>
 		<label id="1">Where is the woman calling ?</>
 		<choice id="1">
 			<A answer="false">An office.</A>
@@ -36,7 +9,6 @@
 			<C answer="false">A doctor's surgery.</C>
 			<D answer="false">A factory</D>
 		</choice>
-		<reason id="1">The woman said "I'm calling about my motorbike.</reason>
 		<label id="2">What information does that man ask for ?</>
 		<choice id="2">
 			<A answer="false">The woman's name.</A>
@@ -44,7 +16,6 @@
 			<C answer="true">The make of the bike.</C>
 			<D answer="false">The woman's phone number.</D>
 		</choice>
-		<reason id="2">The man said "What's the make of the bike?".</reason>
 		<label id="3">What is the man going to do ?</>
 		<choice id="3">
 			<A answer="true">Call the suppliers.</A>
@@ -52,69 +23,101 @@
 			<C answer="false">Order a new part.</C>
 			<D answer="false">Pick up the motorbike.</D>
 		</choice>
-		<reason id="3">The man said "I'll call our suppliers".</reason>
 	</Question>
 	<Question>
-		<sound>sound/part1_audio3.mp3</sound>
-		<label id="1"></>
+		<sound>sound/part3_audio2.mp3</sound>
+		<label id="1">Where are they ?</>
 		<choice id="1">
-			<A answer="false">Yes, it very complicated.</A>
-			<B answer="false">Yes, I often where it.</B>
-			<C answer="false">No, but she use to.</C>
-			<D answer="false"></D>
+			<A answer="true">In a shop.</A>
+			<B answer="false">In a college.</B>
+			<C answer="false">In the street.</C>
+			<D answer="false">In a factory</D>
 		</choice>
-		<reason id="1"></reason>
-		<label id="2"></>
+		<label id="2">Where is the manager's office ?</>
 		<choice id="2">
-			<A answer="false">Yes, it very complicated.</A>
-			<B answer="false">Yes, I often where it.</B>
-			<C answer="false">No, but she use to.</C>
-			<D answer="false"></D>
+			<A answer="true">On the second floor.</A>
+			<B answer="false">Near the restaurant.</B>
+			<C answer="false">Next to the changing rooms.</C>
+			<D answer="false">Next to the staff kitchen.</D>
 		</choice>
-		<reason id="2"></reason>
-		<label id="3"></>
+		<label id="3">What is on the lower ground floor ?</>
 		<choice id="3">
-			<A answer="false">Yes, it very complicated.</A>
-			<B answer="false">Yes, I often where it.</B>
-			<C answer="false">No, but she use to.</C>
-			<D answer="false"></D>
+			<A answer="false">The household goods department.</A>
+			<B answer="false">The staff kitchen.</B>
+			<C answer="true">The restaurant.</C>
+			<D answer="false">The changing rooms.</D>
 		</choice>
-		<reason id="3"></reason>
+	</Question>
+	<Question>
+		<sound>sound/part3_audio3.mp3</sound>
+		<label id="1">What is the woman doing this evening ?</>
+		<choice id="1">
+			<A answer="false">Catching a train.</A>
+			<B answer="false">Taking a flight.</B>
+			<C answer="false">Going on holiday.</C>
+			<D answer="false">Meeting a friend.</D>
+		</choice>
+		<label id="2">What time is the taxi coming ?</>
+		<choice id="2">
+			<A answer="false">8' o'clock.</A>
+			<B answer="true">7' o'clock.</B>
+			<C answer="false">Half past four.</C>
+			<D answer="false">Half past two.</D>
+		</choice>
+		<label id="3">How long will the woman's journey take ? </>
+		<choice id="3">
+			<A answer="false">1 and a half hours.</A>
+			<B answer="false">2 and a half hours.</B>
+			<C answer="false">4 and a half hours.</C>
+			<D answer="false">8 and a half hours.</D>
+		</choice>
 	</Question>
 	<Question>
 		<sound>sound/part1_audio4.mp3</sound>
-		<choice>
-			<A answer="false">The ships are still in port.</A>
-			<B answer="true">No, not yet.</B>
-			<C answer="false">The report has an interesting red design.</C>
-			<D answer="false"></D>
+		<label id="1">Where did the woman go at the weekend ?</>
+		<choice id="1">
+			<A answer="false">To a city.</A>
+			<B answer="false">To the beach.</B>
+			<C answer="true">To the countryside.</C>
+			<D answer="false">To visit a friend.</D>
+		</choice>
+		<label id="2">What was the weather like at the weekend ?</>
+		<choice id="2">
+			<A answer="true">Sunny.</A>
+			<B answer="false">Cloudy.</B>
+			<C answer="false">Rainy.</C>
+			<D answer="false">Snowy</D>
+		</choice>
+		<label id="3">What did the man do at the weekend ?</>
+		<choice id="3">
+			<A answer="false">He got married.</A>
+			<B answer="false">He had a party.</B>
+			<C answer="false">He went out for a drink.</C>
+			<D answer="true">He prepared for his wedding</D>
 		</choice>
 	</Question>
 	<Question>
-		<sound>sound/part1_audio5.mp3</sound>
-		<label id="1"></>
+		<sound>sound/part3_audio5.mp3</sound>
+		<label id="1">What does the man need ?</>
 		<choice id="1">
-			<A answer="false">Yes, it very complicated.</A>
-			<B answer="false">Yes, I often where it.</B>
-			<C answer="false">No, but she use to.</C>
-			<D answer="false"></D>
+			<A answer="false">Red pens.</A>
+			<B answer="false">Blue pens.</B>
+			<C answer="false">Black pens.</C>
+			<D answer="false">Green pens.</D>
 		</choice>
-		<reason id="1"></reason>
-		<label id="2"></>
+		<label id="2">The man thought that stationery was kept ...</>
 		<choice id="2">
-			<A answer="false">Yes, it very complicated.</A>
-			<B answer="false">Yes, I often where it.</B>
-			<C answer="false">No, but she use to.</C>
-			<D answer="false"></D>
+			<A answer="false">In a drawer.</A>
+			<B answer="false">In a desk.</B>
+			<C answer="false">On a shelf.</C>
+			<D answer="false">In a cupboard.</D>
 		</choice>
-		<reason id="2"></reason>
-		<label id="3"></>
+		<label id="3">The man wants to order some equipment to ...</>
 		<choice id="3">
-			<A answer="false">Yes, it very complicated.</A>
-			<B answer="false">Yes, I often where it.</B>
-			<C answer="false">No, but she use to.</C>
-			<D answer="false"></D>
+			<A answer="false">Make corrections.</A>
+			<B answer="false">Hold documents together.</B>
+			<C answer="false">Print out documents.</C>
+			<D answer="false">File documents away.</D>
 		</choice>
-		<reason id="3"></reason>
 	</Question>
 </Questions>		

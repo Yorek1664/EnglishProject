@@ -1,22 +1,6 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
 <Data>
 	<Listening>
-		<Questions>
-			<Question part="1">
-				<pic>pic/part1_pic1.PNG</pic>
-				<labels>
-					<label id="1"></label>
-				</labels>
-				<sound>sound/part1_audio1.mp3</sound>
-				<choices>
-					<choice id="1">
-						<A answer="false">Both people are standing up.</A>
-						<B answer="false">The patient is younger than the doctor.</B>
-						<C answer="false">The doctor is listening to the patient's heart.</C>
-						<D answer="true">The doctor is talking with the patient.</D>
-					</choice>
-				</choices>
-			</Question>
+		
 			<Question part="2">
 				<pic></pic>
 				<labels>
