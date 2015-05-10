@@ -74,6 +74,7 @@ public class AccueilController extends Controller{
 	
 	public List<PartQuestion> listQuestionListen(){
 		List<PartQuestion> list = new ArrayList<PartQuestion>();
+
 		List<PartQuestion> QPart1 = new ArrayList<PartQuestion>();
 		List<PartQuestion> QPart2 = new ArrayList<PartQuestion>();
 		List<PartQuestion> QPart3 = new ArrayList<PartQuestion>();

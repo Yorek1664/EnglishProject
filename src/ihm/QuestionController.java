@@ -3,17 +3,21 @@ package ihm;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.net.URL;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
+import com.sun.javafx.scene.control.behavior.TwoLevelFocusBehavior;
+
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.text.TextAlignment;
 import Model.PartQuestion;
 import Model.Question;
 
@@ -24,13 +28,17 @@ public class QuestionController extends Controller{
 	Label c= getLabelC();
 	Label d= getLabelD();
 	Label joker1= getJoker1();
+	boolean joker1Use=false;
 	Label joker2= getJoker2();
+	boolean joker2Use=false;
 	Label exit= getExit();
 	Label title= getLabelTitle();
 	ImageView image = new ImageView();
 	List<PartQuestion> questions= new ArrayList<PartQuestion>();
 	PartQuestion actualPartQuestion=null;
 	Question actualQuestion=null;
+	Thread threadMusic ;
+	MediaPlayer mediaPlayer;
 	
 	@Override
 	protected void setStartCondition() {
@@ -41,27 +49,62 @@ public class QuestionController extends Controller{
 		this.image.setLayoutY(45);
 		this.getChildren().addAll(a,b,c,d,joker1,joker2,image,exit,title);
 		exit.setOnMouseClicked(e->{
-			try {
-				Controller.initialise(this.getApp(), AccueilController.class);
-			} catch (Exception e1) {
-				e1.printStackTrace();
-			}
+			exit();
 		});
 		a.setOnMouseClicked(e->{
-			if(answer()){
-				
-			}else{
-				
-			}
+			answer(a.getText());
 		});
+		b.setOnMouseClicked(e->{
+			answer(b.getText());
+		});
+		c.setOnMouseClicked(e->{
+			answer(c.getText());
+		});
+		d.setOnMouseClicked(e->{
+			answer(d.getText());
+		});
+		title.setOnMouseClicked(e->{
+			replay();
+		});
+		joker1.setOnMouseClicked(e->{
+			joker1();
+		});
+		joker2.setOnMouseClicked(e->{
+			joker2();
+		});
+	}
+	private void answer(String s) {
+		if(verifAnswer(s)){
+			setNextQuestion();
+			displayQuestion();
+		}else{
+			exit();
+		}
+	}
+	private void exit() {
+		try {
+			initialiseDisplay();
+			Controller.initialise(this.getApp(), AccueilController.class);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
 	}
 	public void setQuestion(List<PartQuestion> questions){
 		this.questions=questions;
 		setNextQuestion();
 		displayQuestion();
 	}
+	@SuppressWarnings("incomplete-switch")
 	private void displayQuestion(){
 		initialiseDisplay();
+		if(this.actualPartQuestion==null || this.actualQuestion==null){
+			Alert alert = new Alert(AlertType.INFORMATION, "You finish this part!", null);
+			alert.setHeaderText("GREAT JOB");
+			alert.setTitle("Good");
+			alert.showAndWait();
+			exit();
+			return;
+		}
 		switch(this.actualPartQuestion.getType()){
 		case Image:displayImage(this.actualPartQuestion.getPicture());
 		case Listen:displayAudio(this.actualPartQuestion.getSoundFile());
@@ -71,51 +114,73 @@ public class QuestionController extends Controller{
 			switch (i) {
 			case 0:
 				this.a.setText(this.actualQuestion.getAnswers().get(i));
-				this.a.setDisable(false);
+				this.a.setVisible(true);
 				break;
 			case 1:
 				this.b.setText(this.actualQuestion.getAnswers().get(i));
-				this.b.setDisable(false);
+				this.b.setVisible(true);
 				break;
 			case 2:
 				this.c.setText(this.actualQuestion.getAnswers().get(i));
-				this.c.setDisable(false);
+				this.c.setVisible(true);
 				break;
 			case 3:
 				this.d.setText(this.actualQuestion.getAnswers().get(i));
-				this.d.setDisable(false);
+				this.d.setVisible(true);
 				break;
 			}
 		}
 		System.out.println("question display : "+this.actualQuestion.getQuestion());
 	}
-	private boolean answer(){
-		return true;
+	private boolean verifAnswer(String s){
+		System.out.println("Correct answer: "+this.actualQuestion.getGoodAnswer());
+		System.out.println("User answer: "+s);
+		if(s.equalsIgnoreCase(this.actualQuestion.getGoodAnswer())){
+			Alert alert = new Alert(AlertType.INFORMATION, "Great Answer", null);
+			alert.setHeaderText("Good");
+			alert.setTitle("Good");
+			alert.showAndWait();
+			return true;
+		}else{
+			new Alert(AlertType.ERROR, "Bad Answer, Retry an other time.", null).showAndWait();
+			return false;
+		}
 	}
 	private void initialiseDisplay(){
+		if(mediaPlayer !=null){
+			mediaPlayer.stop();
+			mediaPlayer = null;
+		}
 		this.a.setText("");
-		this.a.setDisable(true);
+		this.a.setVisible(false);
 		this.b.setText("");
-		this.b.setDisable(true);
+		this.b.setVisible(false);
 		this.c.setText("");
-		this.c.setDisable(true);
+		this.c.setVisible(false);
 		this.d.setText("");
-		this.d.setDisable(true);
+		this.d.setVisible(false);
 		this.image.setVisible(false);
+		this.title.setTooltip(null);
 	}
 	private void displayAudio(String path){
 		try {
-			Runnable task = new Runnable() {
-	               public void run() {
-	       			Media hit = new Media(Paths.get(path).toUri().toString());
-	       			MediaPlayer mediaPlayer = new MediaPlayer(hit);
-	       			mediaPlayer.play();}
-	            };
-	            new Thread(task).start();
+			this.title.setTooltip(new Tooltip("Click for replay the audio"));
+   			Media hit = new Media(Paths.get(path).toUri().toString());
+   			mediaPlayer = new MediaPlayer(hit);
+   			int indexQuestion = this.actualPartQuestion.getQuestion().indexOf(this.actualQuestion);
+			if(indexQuestion==0){
+				mediaPlayer.play();//play automatique suelement la premiere fois
+			}
 	    } catch(Exception ex) {
 	        System.out.println("Error with playing sound.");
 	        ex.printStackTrace();
 	    }
+	}
+	private void replay(){
+		if(mediaPlayer!=null){
+			mediaPlayer.stop();
+			mediaPlayer.play();
+		}
 	}
 	private void displayImage(String path){
 		Image img;
@@ -164,6 +229,76 @@ public class QuestionController extends Controller{
 			return false;
 		}
 	}
+	public void joker1(){
+		if(!joker1Use){
+			joker1Use=true;
+			int ind = this.actualQuestion.getAnswers().indexOf(this.actualQuestion.getGoodAnswer());
+			Random r = new Random();
+			int masque = 0;
+			while(masque <2){
+				switch(r.nextInt(4)){
+				case 0: if(!(ind==0) && a.isVisible()){a.setVisible(false);masque++;};break;
+				case 1: if(!(ind==1) && b.isVisible()){b.setVisible(false);masque++;};break;
+				case 2: if(!(ind==2) && c.isVisible()){c.setVisible(false);masque++;};break;
+				case 3: if(!(ind==3) && d.isVisible()){d.setVisible(false);masque++;};break;
+				}
+				System.out.println("turn");
+			}
+			try {
+				joker1.setGraphic(new ImageView(new Image(new FileInputStream(new File("src/croix.png")),65,37,false,false)));
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	public void joker2(){
+		if(!joker2Use){
+			joker2Use=true;
+			int ind = this.actualQuestion.getAnswers().indexOf(this.actualQuestion.getGoodAnswer());
+			Random r = new Random();
+			int p1 = r.nextInt(100);
+			List<Integer> l = new ArrayList<Integer>();
+			l.add(r.nextInt(100-p1));
+			l.add(r.nextInt(100-p1-l.get(0)));
+			l.add(100-p1-l.get(0)-l.get(1));
+			String l1,l2,l3,l4;
+			if(ind==0){
+				l1 = "A : "+p1+"%";
+			}else{
+				l1 = "A : "+l.get(0)+"%";
+				l.remove(0);
+			}
+			if(ind==1){
+				l2 = "B : "+p1+"%";
+			}else{
+				l2 = "B : "+l.get(0)+"%";
+				l.remove(0);
+			}
+			if(ind==2){
+				l3 = "C : "+p1+"%";
+			}else{
+				l3 = "C : "+l.get(0)+"%";
+				l.remove(0);
+			}
+			if(ind==3){
+				l4 = "D : "+p1+"%";
+			}else{
+				l4 = "D : "+l.get(0)+"%";
+				l.remove(0);
+			}
+			
+			Alert alert = new Alert(AlertType.INFORMATION, l1+"\n"+l2+"\n"+l3+"\n"+l4, null);
+			alert.setHeaderText("Public vote");
+			alert.setTitle("Joker");
+			alert.showAndWait();
+			try {
+				joker2.setGraphic(new ImageView(new Image(new FileInputStream(new File("src/croix.png")),65,37,false,false)));
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
 	static public Label getLabelA(){
 		Label l = new Label();
 		l.setLayoutX(46);
@@ -208,6 +343,7 @@ public class QuestionController extends Controller{
 		l.setPrefWidth(485);
 		l.setStyle("-fx-font-weight: bold;");
 		setLabelGraphic(l);
+		l.setTooltip(new Tooltip("Click for replay the audio"));
 		return l;
 	}
 	static public Label getJoker1(){
