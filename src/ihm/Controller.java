@@ -1,7 +1,17 @@
 package ihm;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundRepeat;
+import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
+import javafx.scene.paint.Paint;
+import javafx.scene.text.Font;
+import javafx.scene.text.TextAlignment;
 
 
 
@@ -27,5 +37,18 @@ public abstract class Controller extends Pane{
 	}
 	private void setApp(App app){
 		this.app=app;
+	}
+	public void setBackgroundImage(String url,double width,double height){
+		BackgroundImage myBI= new BackgroundImage(new Image(url,width,height,false,true),
+		        BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
+		          BackgroundSize.DEFAULT);
+		//then you set to your node
+		this.setBackground(new Background(myBI));
+	}
+	public static void setLabelGraphic(Label l){
+		l.setTextAlignment(TextAlignment.CENTER);
+		l.setAlignment(Pos.CENTER);
+		l.setTextFill(Paint.valueOf("#FFFFFF"));
+		l.setFont(Font.font("TimeNewRoman", 12));
 	}
 }

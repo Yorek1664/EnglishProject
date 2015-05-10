@@ -1,50 +1,107 @@
 package ihm;
 
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.control.Button;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import Model.PartQuestion;
+import Model.PartQuestion.TypeQuestion;
+import Model.Question;
 
 
 public class AccueilController extends Controller{
-	private static final int PADDING = 15;
-	VBox vbox = new VBox();
-	HBox hbox = new HBox();
-	Label title = new Label("Training for Toeic");
-	Button butRead = new Button("Reading");
-	Button butList = new Button("Listening");
+	Label a= getLabelA();
+	Label b= getLabelB();
+	Label title= getLabelTitle();
 	@Override
 	protected void setStartCondition() {
-		this.getChildren().add(vbox);
-		this.vbox.setAlignment(Pos.CENTER);
-		this.vbox.setPadding(new Insets(15));
-		this.vbox.getChildren().addAll(title,hbox);
-		this.hbox.getChildren().addAll(butRead,butList);
-		butRead.setOnAction(e->{
-			title.textProperty().set("read");
+		this.setBackgroundImage("accueil.png",600,400);
+		this.getChildren().addAll(a,b,title);
+		a.setOnMouseClicked(e->{
+			try {
+				QuestionController questionController = (QuestionController)Controller.initialise(this.getApp(), QuestionController.class);
+				questionController.setQuestion(listQuestionListen());
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
 		});
-		butList.setOnAction(e->{
-			title.textProperty().set("list");
+		b.setOnMouseClicked(e->{
+			try {
+				QuestionController questionController = (QuestionController)Controller.initialise(this.getApp(), QuestionController.class);
+				questionController.setQuestion(listQuestionListen());
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
 		});
+	}
+	static public Label getLabelA(){
+		Label l = new Label();
+		l.setLayoutX(60);
+		l.setLayoutY(303);
+		l.setPrefHeight(36);
+		l.setPrefWidth(230);
+		l.setText("Listening part");
+		setLabelGraphic(l);
+		return l;
+	}
+	static public Label getLabelB(){
+		Label l = new Label();
+		l.setLayoutX(310);
+		l.setLayoutY(303);
+		l.setPrefHeight(36);
+		l.setPrefWidth(230);
+		l.setText("Reading part");
+		setLabelGraphic(l);		
+		return l;
+	}
+	static public Label getLabelTitle(){
+		Label l = new Label();
+		l.setLayoutX(80);
+		l.setLayoutY(205);
+		l.setPrefHeight(63);
+		l.setPrefWidth(440);
+		l.setText("Training for the TOEIC");
+		setLabelGraphic(l);
+		l.setStyle("-fx-font-weight: bold;");
+		l.setFont(Font.font("TimeNewRoman", 32));
+		return l;
+	}
+	public List<PartQuestion> listQuestionListen(){
+		List<PartQuestion> list = new ArrayList<PartQuestion>();
+		List<Question> questions= new ArrayList<Question>();
+		List<String> answers= new ArrayList<String>();
+		//question 1;
+		answers.add("A");
+		answers.add("B");
+		answers.add("C");
+		answers.add("D");
+		questions.add(new Question("listen and observe(C)",answers,"C"));
+		list.add(new PartQuestion(TypeQuestion.Image, "./pic/part1_pic1.PNG", "./sound/part1_audio1.mp3", questions));
 		
-		//Binding position/size
+		//Question 2
+		questions.clear();
+		answers.clear();
+		answers.add("A");
+		answers.add("B");
+		answers.add("C");
+		questions.add(new Question("listen(A)",answers,"A"));
+		list.add(new PartQuestion(TypeQuestion.Listen, null, "./sound/part2_audio1.mp3", questions));
 		
-		vbox.prefWidthProperty().bind(this.widthProperty());
-		vbox.maxWidthProperty().bind(vbox.prefWidthProperty());
-		vbox.minWidthProperty().bind(vbox.prefWidthProperty());
-
-		hbox.prefWidthProperty().bind(vbox.prefWidthProperty().subtract(PADDING));
-		hbox.maxWidthProperty().bind(hbox.prefWidthProperty());
-		hbox.minWidthProperty().bind(hbox.prefWidthProperty());
+		//Question3
+		questions.clear();
+		answers.add("D");
+		questions.add(new Question("listen(B)",answers,"B"));
+		questions.add(new Question("listen(C)",answers,"C"));
+		questions.add(new Question("listen(D)",answers,"D"));
+		list.add(new PartQuestion(TypeQuestion.Listen, null, "./sound/part3_audio1.mp3", questions));
 		
-		butRead.prefWidthProperty().bind(hbox.prefWidthProperty().divide(3));
-		butRead.maxWidthProperty().bind(butRead.prefWidthProperty());
-		butRead.minWidthProperty().bind(butRead.prefWidthProperty());
-
-		butList.prefWidthProperty().bind(hbox.prefWidthProperty().divide(3));
-		butList.maxWidthProperty().bind(butList.prefWidthProperty());
-		butList.minWidthProperty().bind(butList.prefWidthProperty());
+		//Question4
+		questions.clear();
+		questions.add(new Question("answer(B)",answers,"B"));
+		list.add(new PartQuestion(TypeQuestion.read, null, null, questions));
+		return list;
 	}
 }
