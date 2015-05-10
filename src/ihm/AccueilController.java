@@ -79,27 +79,36 @@ public class AccueilController extends Controller{
 		answers.add("C");
 		answers.add("D");
 		questions.add(new Question("listen and observe(C)",answers,"C"));
-		list.add(new PartQuestion(TypeQuestion.Image, "./pic/part1_pic1.PNG", "./sound/part1_audio1.mp3", questions));
+		list.add(new PartQuestion(TypeQuestion.Image, "pic/part1_pic1.PNG", "sound/part1_audio1.mp3", questions));
 		
 		//Question 2
-		questions.clear();
-		answers.clear();
+		questions= new ArrayList<Question>();
+		answers= new ArrayList<String>();
 		answers.add("A");
 		answers.add("B");
 		answers.add("C");
 		questions.add(new Question("listen(A)",answers,"A"));
-		list.add(new PartQuestion(TypeQuestion.Listen, null, "./sound/part2_audio1.mp3", questions));
+		list.add(new PartQuestion(TypeQuestion.Listen, null, "sound/part2_audio1.mp3", questions));
 		
 		//Question3
-		questions.clear();
+		questions= new ArrayList<Question>();
+		answers= new ArrayList<String>();
+		answers.add("A");
+		answers.add("B");
+		answers.add("C");
 		answers.add("D");
 		questions.add(new Question("listen(B)",answers,"B"));
 		questions.add(new Question("listen(C)",answers,"C"));
 		questions.add(new Question("listen(D)",answers,"D"));
-		list.add(new PartQuestion(TypeQuestion.Listen, null, "./sound/part3_audio1.mp3", questions));
+		list.add(new PartQuestion(TypeQuestion.Listen, null, "sound/part3_audio1.mp3", questions));
 		
 		//Question4
-		questions.clear();
+		questions= new ArrayList<Question>();
+		answers= new ArrayList<String>();
+		answers.add("A");
+		answers.add("B");
+		answers.add("C");
+		answers.add("D");
 		questions.add(new Question("answer(B)",answers,"B"));
 		list.add(new PartQuestion(TypeQuestion.read, null, null, questions));
 		return list;
