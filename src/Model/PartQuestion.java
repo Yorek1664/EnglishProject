@@ -4,7 +4,7 @@ import java.util.List;
 
 public class PartQuestion {
 
-	enum TypeQuestion{
+	public enum TypeQuestion{
 		Image,//have 1 picture, 1 soundfile, 1 question
 		Listen,//1 soundfile, 1 or more question
 		read;//1 or more question
@@ -13,19 +13,19 @@ public class PartQuestion {
 	private TypeQuestion type;
 	private String picture;
 	private String soundFile;
-	private List<Question> question;
+	private List<Question> questions;
 	
 	public PartQuestion() {
 		super();
 	}
 	
 	public PartQuestion(TypeQuestion type, String picture, String soundFile,
-			List<Question> question) {
+			List<Question> questions) {
 		super();
 		this.type = type;
 		this.picture = picture;
 		this.soundFile = soundFile;
-		this.question = question;
+		this.questions = questions;
 	}
 	
 	public TypeQuestion getType() {

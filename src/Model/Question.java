@@ -11,10 +11,11 @@ public class Question {
 	
 	public Question() {
 	}
-	public Question(String question, List<String> answers) {
+	public Question(String question, List<String> answers, String goodAnswer) {
 		super();
 		this.question = question;
 		this.answers = answers;
+		this.goodAnswer=goodAnswer;
 	}
 	
 	public String getQuestion() {
