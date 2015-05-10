@@ -1,5 +1,6 @@
 package Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PartQuestion {
@@ -17,6 +18,7 @@ public class PartQuestion {
 	
 	public PartQuestion() {
 		super();
+		this.questions = new ArrayList<Question>();
 	}
 	
 	public PartQuestion(TypeQuestion type, String picture, String soundFile,
@@ -51,6 +53,9 @@ public class PartQuestion {
 	}
 	public void setQuestion(List<Question> questions) {
 		this.questions = questions;
+	}
+	public void addQuestion(Question q){
+		this.questions.add(q);
 	}
 	
 	

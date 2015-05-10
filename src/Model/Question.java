@@ -1,5 +1,6 @@
 package Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Question {
@@ -10,7 +11,10 @@ public class Question {
 	
 	
 	public Question() {
+		super();
+		this.answers = new ArrayList<String>();
 	}
+	
 	public Question(String question, List<String> answers, String goodAnswer) {
 		super();
 		this.question = question;
@@ -35,6 +39,10 @@ public class Question {
 	}
 	public void setGoodAnswer(String goodAnswer) {
 		this.goodAnswer = goodAnswer;
+	}
+	
+	public void addAnswers(String answer){
+		this.answers.add(answer);
 	}
 	
 	

@@ -5,6 +5,7 @@ package ihm;
 import java.util.ArrayList;
 import java.util.List;
 
+import xml.ParserXml;
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
 import Model.PartQuestion;
@@ -31,7 +32,7 @@ public class AccueilController extends Controller{
 		b.setOnMouseClicked(e->{
 			try {
 				QuestionController questionController = (QuestionController)Controller.initialise(this.getApp(), QuestionController.class);
-				questionController.setQuestion(listQuestionListen());
+				questionController.setQuestion(listQuestionReading());
 			} catch (Exception e1) {
 				e1.printStackTrace();
 			}
@@ -69,39 +70,41 @@ public class AccueilController extends Controller{
 		l.setFont(Font.font("TimeNewRoman", 32));
 		return l;
 	}
+	
+	
 	public List<PartQuestion> listQuestionListen(){
 		List<PartQuestion> list = new ArrayList<PartQuestion>();
-		List<Question> questions= new ArrayList<Question>();
-		List<String> answers= new ArrayList<String>();
-		//question 1;
-		answers.add("A");
-		answers.add("B");
-		answers.add("C");
-		answers.add("D");
-		questions.add(new Question("listen and observe(C)",answers,"C"));
-		list.add(new PartQuestion(TypeQuestion.Image, "./pic/part1_pic1.PNG", "./sound/part1_audio1.mp3", questions));
+		List<PartQuestion> QPart1 = new ArrayList<PartQuestion>();
+		List<PartQuestion> QPart2 = new ArrayList<PartQuestion>();
+		List<PartQuestion> QPart3 = new ArrayList<PartQuestion>();
+		List<PartQuestion> QPart4 = new ArrayList<PartQuestion>();
 		
-		//Question 2
-		questions.clear();
-		answers.clear();
-		answers.add("A");
-		answers.add("B");
-		answers.add("C");
-		questions.add(new Question("listen(A)",answers,"A"));
-		list.add(new PartQuestion(TypeQuestion.Listen, null, "./sound/part2_audio1.mp3", questions));
 		
-		//Question3
-		questions.clear();
-		answers.add("D");
-		questions.add(new Question("listen(B)",answers,"B"));
-		questions.add(new Question("listen(C)",answers,"C"));
-		questions.add(new Question("listen(D)",answers,"D"));
-		list.add(new PartQuestion(TypeQuestion.Listen, null, "./sound/part3_audio1.mp3", questions));
+		ParserXml parser = new ParserXml();
 		
-		//Question4
-		questions.clear();
-		questions.add(new Question("answer(B)",answers,"B"));
-		list.add(new PartQuestion(TypeQuestion.read, null, null, questions));
+		QPart1 = parser.getListeningPart1();
+		QPart2 = parser.getListeningPart2();
+		QPart3 = parser.getListeningPart3();
+		QPart4 = parser.getListeningPart4();
+	
+		
+		list.add(QPart1.get(0));
+		list.add(QPart2.get(0));
+		list.add(QPart3.get(0));
+		list.add(QPart4.get(0));
+		
+		return list;
+	}
+	
+	public List<PartQuestion> listQuestionReading(){
+		List<PartQuestion> list = new ArrayList<PartQuestion>();
+		List<PartQuestion> QPart5 = new ArrayList<PartQuestion>();
+		
+		ParserXml parser = new ParserXml();
+		QPart5 = parser.getReadingPart1();
+		
+		list.add(QPart5.get(0));
+		
 		return list;
 	}
 }

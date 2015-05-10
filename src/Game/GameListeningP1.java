@@ -18,7 +18,9 @@ public class GameListeningP1 extends GameLoop{
 	public void Init() {
 		// TODO Auto-generated method stub
 		ParserXml parser = new ParserXml();
-		listQuestion = parser.getListeningPart1();
+		
+		
+		//listQuestion = parser.getListeningPart1();
 		currentQuestion = -1;
 		
 		/* 
