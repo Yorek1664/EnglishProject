@@ -105,9 +105,9 @@ public class QuestionController extends Controller{
 	}
 	private void answer(String s) {
 		if(verifAnswer(s)){
+			score.set(score.get()+1);
 			setNextQuestion();
 			displayQuestion();
-			score.set(score.get()+1);
 		}else{
 			if(score.get()<5){
 				score.set(0);
