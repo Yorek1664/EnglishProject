@@ -47,6 +47,13 @@ public class QuestionController extends Controller{
 				e1.printStackTrace();
 			}
 		});
+		a.setOnMouseClicked(e->{
+			if(answer()){
+				
+			}else{
+				
+			}
+		});
 	}
 	public void setQuestion(List<PartQuestion> questions){
 		this.questions=questions;
@@ -81,6 +88,9 @@ public class QuestionController extends Controller{
 			}
 		}
 		System.out.println("question display : "+this.actualQuestion.getQuestion());
+	}
+	private boolean answer(){
+		return true;
 	}
 	private void initialiseDisplay(){
 		this.a.setText("");
