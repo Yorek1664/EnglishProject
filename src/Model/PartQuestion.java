@@ -47,10 +47,10 @@ public class PartQuestion {
 		this.soundFile = soundFile;
 	}
 	public List<Question> getQuestion() {
-		return question;
+		return questions;
 	}
-	public void setQuestion(List<Question> question) {
-		this.question = question;
+	public void setQuestion(List<Question> questions) {
+		this.questions = questions;
 	}
 	
 	
