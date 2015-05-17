@@ -53,7 +53,7 @@
 		<label id="1">What is the woman doing this evening ?</label>
 		<choice id="1">
 			<A answer="false">Catching a train.</A>
-			<B answer="false">Taking a flight.</B>
+			<B answer="true">Taking a flight.</B>
 			<C answer="false">Going on holiday.</C>
 			<D answer="false">Meeting a friend.</D>
 		</choice>
@@ -67,7 +67,7 @@
 		<label id="3">How long will the woman's journey take ? </label>
 		<choice id="3">
 			<A answer="false">1 and a half hours.</A>
-			<B answer="false">2 and a half hours.</B>
+			<B answer="true">2 and a half hours.</B>
 			<C answer="false">4 and a half hours.</C>
 			<D answer="false">8 and a half hours.</D>
 		</choice>
@@ -102,7 +102,7 @@
 		<choice id="1">
 			<A answer="false">Red pens.</A>
 			<B answer="false">Blue pens.</B>
-			<C answer="false">Black pens.</C>
+			<C answer="true">Black pens.</C>
 			<D answer="false">Green pens.</D>
 		</choice>
 		<label id="2">The man thought that stationery was kept ...</label>
@@ -110,12 +110,12 @@
 			<A answer="false">In a drawer.</A>
 			<B answer="false">In a desk.</B>
 			<C answer="false">On a shelf.</C>
-			<D answer="false">In a cupboard.</D>
+			<D answer="true">In a cupboard.</D>
 		</choice>
 		<label id="3">The man wants to order some equipment to ...</label>
 		<choice id="3">
 			<A answer="false">Make corrections.</A>
-			<B answer="false">Hold documents together.</B>
+			<B answer="true">Hold documents together.</B>
 			<C answer="false">Print out documents.</C>
 			<D answer="false">File documents away.</D>
 		</choice>
