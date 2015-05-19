@@ -14,8 +14,6 @@ import java.util.Random;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
@@ -121,7 +119,7 @@ public class QuestionController extends Controller{
 	}
 	private void exit() {
 		try {
-			Alert alert = new Alert(AlertType.INFORMATION, "You ear "+getValue()+"€ in this game.", null);
+			Alert alert = new Alert(AlertType.INFORMATION, "You earn €"+getValue()+" in this game.", null);
 			alert.setHeaderText("Finish!");
 			alert.setTitle("Game over");
 			alert.showAndWait();
